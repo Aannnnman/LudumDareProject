@@ -1,9 +1,9 @@
 using System;
 using UnityEngine;
 
-public class KillZone : MonoBehaviour
+public class CollectableVirus : MonoBehaviour
 {
-    public static event Action OnDeath;
+    public static event Action OnVirusTaked;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -13,8 +13,8 @@ public class KillZone : MonoBehaviour
 
             if (player != null)
             {
-                OnDeath?.Invoke();
-                Destroy(player.gameObject);
+                OnVirusTaked?.Invoke();
+                Destroy(gameObject);
             }
         }
     }
