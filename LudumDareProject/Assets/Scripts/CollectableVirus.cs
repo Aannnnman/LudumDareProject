@@ -1,9 +1,9 @@
 using System;
 using UnityEngine;
 
-public class Coin : MonoBehaviour
+public class CollectableVirus : MonoBehaviour
 {
-    public static event Action OnCoinTaked;
+    public static event Action OnVirusTaked;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -13,7 +13,7 @@ public class Coin : MonoBehaviour
 
             if (player != null)
             {
-                OnCoinTaked?.Invoke();
+                OnVirusTaked?.Invoke();
                 Destroy(gameObject);
             }
         }

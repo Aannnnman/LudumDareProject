@@ -1,7 +1,10 @@
+using System;
 using UnityEngine;
 
 public class KillZone : MonoBehaviour
 {
+    public static event Action OnDeath;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision != null)
@@ -10,6 +13,7 @@ public class KillZone : MonoBehaviour
 
             if (player != null)
             {
+                OnDeath?.Invoke();
                 Destroy(player.gameObject);
             }
         }

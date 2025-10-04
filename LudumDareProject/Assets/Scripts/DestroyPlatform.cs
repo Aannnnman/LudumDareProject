@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class DestroyPlatform : MonoBehaviour
 {
+    [SerializeField] private float _destroyTime;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision != null)
@@ -10,7 +12,7 @@ public class DestroyPlatform : MonoBehaviour
 
             if (player != null)
             {
-                Destroy(gameObject);
+                Destroy(gameObject, _destroyTime);
             }
         }
     }
