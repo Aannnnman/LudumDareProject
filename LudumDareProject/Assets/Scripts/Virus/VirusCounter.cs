@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class VirusCounter : MonoBehaviour
 {
-    //[SerializeField] private Text _virusCounterText;
+    private static VirusCounter _instance;
 
     public int VirusCount { get; private set; } = 0;
 
@@ -11,7 +11,16 @@ public class VirusCounter : MonoBehaviour
 
     private void Awake()
     {
-        //UpdateUI();
+        if (_instance == null)
+        {
+            _instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if (_instance != this)
+        {
+            Destroy(gameObject);
+        }
+
         CollectableVirus.OnVirusTaked += PlusVirus;
     }
 
@@ -29,11 +38,5 @@ public class VirusCounter : MonoBehaviour
         {
             Debug.Log(_virusList[i]);
         }
-        //UpdateUI();
     }
-
-    //private void UpdateUI()
-    //{
-    //    _coinCounterText.text = $"Coin: {_coinCount}";
-    //}
 }

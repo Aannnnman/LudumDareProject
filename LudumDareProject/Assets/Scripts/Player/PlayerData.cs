@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerData : MonoBehaviour
@@ -27,13 +28,32 @@ public class PlayerData : MonoBehaviour
     public AudioSource JumpSound => _jumpSound;
     public AudioSource JumpLandingSound => _jumpLandingSound;
 
-    public float ReadMoveInput() => Input.GetAxisRaw("Horizontal");
+    public float ReadMoveInput()
+    {
+        float input = Input.GetAxisRaw("Horizontal");
+        return _isControlInverted ? -input : input;
+    }
 
     public bool ReadJumpInput() => Input.GetKey(KeyCode.Space);
 
     public bool ReadJumpInputUp() => Input.GetKeyUp(KeyCode.Space);
 
     public bool IsGrounded() => Physics2D.OverlapBox(_groundCheck.position, _groundCheckSize, 0f, _whatIsGround);
+
+    private bool _isControlInverted;
+
+    public IEnumerator InvertControlLoop(AudioSource invertedAudioSource)
+    {
+        while (true)
+        {
+            invertedAudioSource.Play();
+            _isControlInverted = true;
+            yield return new WaitForSeconds(3f);
+
+            _isControlInverted = false;
+            yield return new WaitForSeconds(12f);
+        }
+    }
 
     private void OnDrawGizmos()
     {

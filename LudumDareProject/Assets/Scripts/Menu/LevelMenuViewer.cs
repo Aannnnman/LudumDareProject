@@ -8,7 +8,7 @@ public class LevelMenuViewer : MonoBehaviour
 
     private void OnEnable()
     {
-        _virusCounter = FindFirstObjectByType<VirusCounter>();
+        _virusCounter = FindAnyObjectByType<VirusCounter>();
         HowManyLevelsUnlock();
     }
 
