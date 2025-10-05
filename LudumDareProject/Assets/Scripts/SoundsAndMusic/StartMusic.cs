@@ -14,6 +14,7 @@ public class StartMusic : MonoBehaviour
     private void OffMuteAndPlayMusic()
     {
         _music.mute = false;
+        _music.volume = AudioManager.Instance.GetGlobalVolume();
         _music.Play();
     }
 }
