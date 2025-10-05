@@ -9,6 +9,7 @@ public class PlayerMovementState : State
     private float _lowJumpMultiplier = 2f;
     private float _airControlFactor = 1f;
     private float _coyoteTimeCounter;
+    private bool _wasGrounded = false;
 
     public PlayerMovementState(FiniteStateMachine finiteStateMachine, PlayerData playerData) : base(finiteStateMachine) => _playerData = playerData;
 
@@ -30,6 +31,7 @@ public class PlayerMovementState : State
             );
         }
 
+        SoundsApply();
         MovementAnimationUpdate();
         ApplyGravityModifiers();
         Move();
@@ -67,16 +69,41 @@ public class PlayerMovementState : State
         //_playerData.Animator.SetBool("Run", _playerData.ReadMoveInput() != 0f && _playerData.IsGrounded() /*&& !_playerData.ReadShootInput()*/);
     }
 
+    private void SoundsApply()
+    {
+        bool isGrounded = _playerData.IsGrounded();
+        float moveInput = _playerData.ReadMoveInput();
+        bool jumpInput = _playerData.ReadJumpInput();
+
+        if (isGrounded && moveInput != 0f)
+        {
+            if (!_playerData.MoveSound.isPlaying)
+                _playerData.MoveSound.Play();
+        }
+        else
+        {
+            if (_playerData.MoveSound.isPlaying)
+                _playerData.MoveSound.Stop();
+        }
+
+        if (isGrounded && jumpInput)
+        {
+            _playerData.JumpSound.Play();
+        }
+
+        if (isGrounded && !_wasGrounded)
+        {
+            _playerData.JumpLandingSound.Play();
+        }
+
+        _wasGrounded = isGrounded;
+    }
+
     private void MovementStateTransitions()
     {
         if (_playerData.ReadMoveInput() == 0f && _playerData.IsGrounded())
         {
             FiniteStateMachine.SetState<PlayerIdleState>();
         }
-
-        //if (_playerData.ReadShootInput() && _playerData.IsGrounded() || _playerData.ReadShootInput() && _playerData.ReadMoveInput() != 0f && _playerData.IsGrounded())
-        //{
-        //    FiniteStateMachine.SetState<PlayerShootingState>();
-        //}
     }
 }

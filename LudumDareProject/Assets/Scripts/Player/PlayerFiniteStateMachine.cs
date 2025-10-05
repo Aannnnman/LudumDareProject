@@ -12,7 +12,6 @@ public class PlayerFiniteStateMachine : MonoBehaviour
 
         _finiteStateMachine.AddState(new PlayerIdleState(_finiteStateMachine, _playerData));
         _finiteStateMachine.AddState(new PlayerMovementState(_finiteStateMachine, _playerData));
-        //_finiteStateMachine.AddState(new PlayerShootingState(_finiteStateMachine, _playerData));
 
         _finiteStateMachine.SetState<PlayerIdleState>();
     }
