@@ -14,27 +14,14 @@ public class Mail : MonoBehaviour
         _virusCounter = FindFirstObjectByType<VirusCounter>();
         _originColor = _mailText.color;
         MailCheck();
-        OnObjects();
     }
 
     private void MailCheck()
     {
-        switch (_virusCounter.VirusCount)
+        for (int i = 0; i <= _virusCounter.VirusCount && i < _toOnLetters.Length; i++)
         {
-            case 0:
-                return;
-            case 1:
-                ChangeMailTextColor(Color.red);
-                break;
-            case 2:
-                break;
-            case 3: 
-                break;
-            case 4: 
-                break;
-            case 5:
-                break;
-        } 
+            _toOnLetters[i].SetActive(true);
+        }
     }
 
     private void ChangeMailTextColor(Color color)

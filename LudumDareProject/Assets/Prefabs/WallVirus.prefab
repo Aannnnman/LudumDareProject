@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1584200078633145849}
   - component: {fileID: 1853637386616733968}
   - component: {fileID: 2848639308616700814}
-  - component: {fileID: 1238561349242714059}
   m_Layer: 6
   m_Name: WallVirus
   m_TagString: Untagged
@@ -144,18 +143,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9b2881353816d94a92b619d0debfe53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1238561349242714059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8060986890786290785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54b820fc3435d4841b7640dc8cdf01c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _moveSpeed: 1.4
-  _waypoints:
-  - {fileID: 7491399134644372357, guid: 608e9b57a2329ea4abaf08f0ad13dba2, type: 3}

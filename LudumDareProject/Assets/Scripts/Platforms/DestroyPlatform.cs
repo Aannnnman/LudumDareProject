@@ -7,13 +7,13 @@ public class DestroyPlatform : MonoBehaviour
     [SerializeField] private float _respawnDelay;
     [SerializeField] private AudioSource _audioSource;
 
-    private Vector3 _startPosition;
-    private Quaternion _startRotation;
+    private SpriteRenderer _spriteRenderer;
+    private Collider2D _collider;
 
     private void Awake()
     {
-        _startPosition = transform.position;
-        _startRotation = transform.rotation;
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        _collider = GetComponent<Collider2D>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -32,16 +32,12 @@ public class DestroyPlatform : MonoBehaviour
     private IEnumerator HandleDestruction()
     {
         yield return new WaitForSeconds(_destroyTime);
-
-        if (_audioSource != null)
-            _audioSource.Play();
-
-        gameObject.SetActive(false);
+        _audioSource.Play();
+        _collider.enabled = false;
+        _spriteRenderer.enabled = false;
 
         yield return new WaitForSeconds(_respawnDelay);
-
-        transform.position = _startPosition;
-        transform.rotation = _startRotation;
-        gameObject.SetActive(true);
+        _collider.enabled = true;
+        _spriteRenderer.enabled = true;
     }
 }
