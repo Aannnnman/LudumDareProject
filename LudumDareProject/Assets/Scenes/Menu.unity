@@ -148,7 +148,10 @@ RectTransform:
   m_PrefabInstance: {fileID: 6904141808106140994}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 --- !u!224 &56144931 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4852619778210897175, guid: 71c87d2b31e6a2b44a57b47d1514c78d, type: 3}
@@ -585,6 +588,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2226174551363659985, guid: 8f15334d71a64a045bd484f773b6cfe3, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2226174551363659985, guid: 8f15334d71a64a045bd484f773b6cfe3, type: 3}
       propertyPath: _sceneName
       value: LevelOne
       objectReference: {fileID: 0}
@@ -825,6 +832,9 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     - target: {fileID: 5649428235055050052, guid: 8f15334d71a64a045bd484f773b6cfe3, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1535,6 +1545,9 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5168916081558025204, guid: 8f15334d71a64a045bd484f773b6cfe3, type: 3}
   m_PrefabInstance: {fileID: 313108942}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 --- !u!1 &661055559
 GameObject:
@@ -1582,6 +1595,7 @@ Transform:
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!114 &661055562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1595,6 +1609,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 =======
+=======
+>>>>>>> Stashed changes
 --- !u!1001 &720269507
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1708,6 +1724,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71c87d2b31e6a2b44a57b47d1514c78d, type: 3}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 --- !u!1 &739544287
 GameObject:
@@ -2150,6 +2169,9 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     - target: {fileID: 5649428235055050052, guid: 8f15334d71a64a045bd484f773b6cfe3, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -2301,6 +2323,9 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     - target: {fileID: 5649428235055050052, guid: 8f15334d71a64a045bd484f773b6cfe3, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -2567,6 +2592,9 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     - target: {fileID: 5649428235055050052, guid: 8f15334d71a64a045bd484f773b6cfe3, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -3045,8 +3073,11 @@ AudioSource:
     m_PostInfinity: 2
     m_RotationOrder: 4
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!114 &1227287316
 =======
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1259353777 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5168916081558025204, guid: 8f15334d71a64a045bd484f773b6cfe3, type: 3}
@@ -3141,7 +3172,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1511758985 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6787628245332027202, guid: 8f15334d71a64a045bd484f773b6cfe3, type: 3}
@@ -3243,8 +3277,11 @@ RectTransform:
   m_PrefabInstance: {fileID: 8108312138457317131}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!1 &2125933341
 =======
+=======
+>>>>>>> Stashed changes
 --- !u!224 &1673702431 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4852619778210897175, guid: 71c87d2b31e6a2b44a57b47d1514c78d, type: 3}
@@ -3967,7 +4004,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+=======
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+>>>>>>> Stashed changes
 =======
   m_Color: {r: 0, g: 0, b: 0, a: 1}
 >>>>>>> Stashed changes
@@ -4550,6 +4591,9 @@ PrefabInstance:
     - target: {fileID: 6033880277566286291, guid: ee018d49f15756b46be0ab89cc5d5126, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -44
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 6076700510272560283, guid: ee018d49f15756b46be0ab89cc5d5126, type: 3}
@@ -4818,6 +4862,9 @@ MonoBehaviour:
   _toWhom: "To: \u2116!%\";%"
   _top: 'Top: Task_01'
   _sceneToLoad: 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 --- !u!1001 &3635710725367405405
 PrefabInstance:
@@ -4971,7 +5018,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1217182062}
     m_Modifications:
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
     - target: {fileID: 1537431729757614749, guid: be93af275f90c67489b50a0659944ff3, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.6936422
@@ -5425,7 +5475,11 @@ SceneRoots:
   - {fileID: 341242103}
   - {fileID: 1227287314}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   - {fileID: 661055561}
+=======
+  - {fileID: 1953968616}
+>>>>>>> Stashed changes
 =======
   - {fileID: 1953968616}
 >>>>>>> Stashed changes
