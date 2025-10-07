@@ -1,15 +1,21 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelMenuViewer : MonoBehaviour
 {
     [SerializeField] private LevelButton[] _levels;
+    [SerializeField] private Button[] _letterButtons;
 
     private VirusCounter _virusCounter;
 
     private void OnEnable()
     {
-        _virusCounter = FindFirstObjectByType<VirusCounter>();
-        HowManyLevelsUnlock();
+        _virusCounter = FindAnyObjectByType<VirusCounter>();
+
+        foreach (var letterButton in _letterButtons)
+        {
+            letterButton.onClick.AddListener(HowManyLevelsUnlock);
+        }
     }
 
     private void HowManyLevelsUnlock()

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class LevelButtonSceneTransition : MonoBehaviour
 {
     [SerializeField] private Button _button;
+    [SerializeField] private string _sceneName;
 
     private void OnEnable()
     {
@@ -18,6 +19,6 @@ public class LevelButtonSceneTransition : MonoBehaviour
 
     private void LevelScene()
     {
-        SceneManager.LoadScene("LevelTwo");
+        SceneManager.LoadScene(_sceneName);
     }
 }

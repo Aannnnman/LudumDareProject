@@ -6,28 +6,22 @@ public class PlayerHorizontalFlip : MonoBehaviour
     [SerializeField] private GameObject[] _noFlipObjects;
 
     private bool _isFacingRight;
+    private SpriteRenderer _spriteRenderer;
+
+    private void Awake()
+    {
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+    }
 
     private void Update()
     {
         if (_playerData.ReadMoveInput() < 0 && !_isFacingRight || _playerData.ReadMoveInput() > 0 && _isFacingRight)
-        {
-            Flip();
-            NoFlip();
-        }
+            SpriteFlip();
     }
 
-    private void Flip()
+    private void SpriteFlip()
     {
         _isFacingRight = !_isFacingRight;
-
-        transform.Rotate(0, 180f, 0);
-    }
-
-    private void NoFlip()
-    {
-        foreach (var noFlipObject in _noFlipObjects)
-        {
-            noFlipObject.transform.Rotate(0f, -180f, 0f);
-        }
+        _spriteRenderer.flipX = _isFacingRight;
     }
 }

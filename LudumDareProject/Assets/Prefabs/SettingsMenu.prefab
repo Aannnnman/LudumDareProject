@@ -604,7 +604,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7790818583054154809}
   - component: {fileID: 4094046157524736651}
-  - component: {fileID: 1853127739876938599}
+  - component: {fileID: 4791258165166620744}
   m_Layer: 5
   m_Name: SoundVolumeSlider
   m_TagString: Untagged
@@ -685,7 +685,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1853127739876938599
+--- !u!114 &4791258165166620744
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -694,6 +694,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9210407304792767894}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a996862e2776a104988260bd52b62028, type: 3}
+  m_Script: {fileID: 11500000, guid: 578b46bfc91b8a94ba2390ee7567dabd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volumeSlider: {fileID: 4094046157524736651}

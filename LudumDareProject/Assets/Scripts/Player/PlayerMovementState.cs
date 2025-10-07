@@ -64,9 +64,9 @@ public class PlayerMovementState : State
 
     private void MovementAnimationUpdate()
     {
-        //_playerData.Animator.SetBool("Jump", !_playerData.IsGrounded());
+        _playerData.Animator.SetBool("Jump", !_playerData.IsGrounded());
         //_playerData.Animator.SetBool("Fall", _playerData.Rigidbody.velocity.y < 0 && !_playerData.IsGrounded());
-        //_playerData.Animator.SetBool("Run", _playerData.ReadMoveInput() != 0f && _playerData.IsGrounded() /*&& !_playerData.ReadShootInput()*/);
+        _playerData.Animator.SetBool("Run", _playerData.ReadMoveInput() != 0f && _playerData.IsGrounded());
     }
 
     private void SoundsApply()
